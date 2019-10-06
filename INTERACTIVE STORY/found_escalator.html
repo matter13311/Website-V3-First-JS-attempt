@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			window.onload = function hideButton(){
+				document.getElementById("button1").style.visibility = "hidden";
+				document.getElementById("button2").style.visibility = "hidden";
+				
+			}
+			setTimeout(showButton,3000);
+			function showButton(){
+				document.getElementById("button1").style.visibility = "visible";
+				document.getElementById("button2").style.visibility = "visible";
+			}
+		</script>
+		<style>
+			.button2{position: absolute; top:82%; right: 50%;font-size: 50px;}
+			.button3{position: absolute; top:72%; right: 50%;font-size: 50px;}
+		</style>
+	</head>
+	<body>
+		<img src="escalator_going_up.png" id = "img1" alt="trainLeft" usemap="#Map" width="1118" height="678" />
+		<button id = "button1" onclick="window.location.href = 'going_up_escalator_death.html';" class = "button2">Go up escalator</button>
+
+		<button id = "button2" onclick="window.location.href = 'elevator.html';" class = "button3">Keep exploring</button>
+
+		<p class = "heading" id = "text1" style="color:red; font-size: 20px;">An escalator! Should I go up the escalator or keep exploring the station?</p>
+	</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			window.onload = function hideButton(){
+				document.getElementById("button1").style.visibility = "hidden";
+				document.getElementById("button2").style.visibility = "hidden";
+				
+			}
+			setTimeout(showButton,3000);
+			function showButton(){
+				document.getElementById("button1").style.visibility = "visible";
+				document.getElementById("button2").style.visibility = "visible";
+			}
+		</script>
+		<style>
+			.button2{position: absolute; top:82%; right: 50%;font-size: 50px;}
+			.button3{position: absolute; top:72%; right: 50%;font-size: 50px;}
+		</style>
+	</head>
+	<body>
+		<img src="subway_tunnel.png" id = "img1" alt="trainLeft" usemap="#Map" width="1118" height="678" />
+		<button id = "button1" onclick="window.location.href = 'buried_death.html';" class = "button2">Stay and wait for rescue</button>
+
+		<button id = "button2" onclick="window.location.href = 'found_platform.html';" class = "button3">Walk down tunnel</button>
+		<p class = "heading" id = "text1" style="color:red; font-size: 20px;">Should I stay and wait or walk down the tunnel?</p>
+	</body>
+</html>
+
+

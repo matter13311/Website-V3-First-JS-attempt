@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			window.onload = function hideButton(){
+				document.getElementById("button1").style.visibility = "hidden";
+				
+				
+			}
+			setTimeout(showButton,3000);
+			function showButton(){
+				document.getElementById("button1").style.visibility = "visible";
+				
+			}
+		</script>
+		<style>
+			.button2{position: absolute; top:60%; right: 50%;font-size: 50px;}
+			
+		</style>
+	</head>
+	<body>
+		<img src="found_platform.png" id = "img1" alt="trainLeft" usemap="#Map" width="1118" height="678" />
+		<button id = "button1" onclick="window.location.href = 'found_escalator.html';" class = "button2">Go inside</button>
+
+		<p class = "heading" id = "text1" style="color:red; font-size: 20px;">I found another station platform! I should go inside!</p>
+	</body>
+</html>
+
+

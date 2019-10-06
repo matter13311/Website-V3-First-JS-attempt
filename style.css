@@ -1,0 +1,171 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.top-nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: transparent;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.top-nav-modified{
+	background-color: #FFFFFF;
+}
+
+.logo{
+	color: #F4F4F4;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 25px;
+}
+.nav-links{
+	/* flex, space-around and width all are essential in making
+	the nav bar ul items display the way they are */
+	display: flex;
+	justify-content: space-around;
+	width: 35%;
+}
+
+.nav-links li{
+
+	list-style: none;/*gets rid of the bullet points*/
+}
+
+
+.nav-links a{
+	color: #F4F4F4;
+	text-decoration: none;
+	letter-spacing: 1.5px;
+	font-weight: bold;
+	font-size: 17px;
+	transition: all 0.3s ease;
+}
+
+.nav-links a:hover{
+	color: #6D6D6D;
+}
+
+.burger-icon{
+	display: none;
+	cursor: pointer;
+}
+
+.burger-icon div{
+	width: 25px;
+	height:3px;
+	background-color: #F4F4F4;
+	margin:5px;
+	transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 1000px){/*after the window is resized to a certain amount
+	it will increase width between ul items so they don't look too squished*/
+	.nav-links{
+		width: 55%;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	body{
+		overflow-x: hidden; /*this prevents the x coord scroll bar from appearing*/
+	}
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: #726A6A;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 45%; /*add someway to blur the background*/
+		transform: translateX(100%);/*this will push the ul items off the screen*/
+		transition: transform 0.5s ease-in;
+	}	
+	.nav-links li{
+		opacity: 0;
+	}
+	.burger-icon{
+		display: block;
+	}
+
+
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{	
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*------------- Under Nav Bar---------------*/
+
+#home{
+	height: 100vh;
+	background: linear-gradient(#C1C1C1,#F3F3F3);
+
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#home img{
+	border-radius: 70%;
+	width: 300px;
+	border: 2px solid #89908E;
+}
+
+#home .user-box{
+	opacity: 0.9;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	text-align: center;
+}
+
+#home h1{
+
+}
+
+main{
+	font-size: 20px;
+	margin:auto;
+  max-width: 90%;
+  text-align: center;
+  width: 75%;
+  border: 1px solid gray;
+  padding: 2em;
+  text-align: justify;
+}

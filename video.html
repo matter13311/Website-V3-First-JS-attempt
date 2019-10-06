@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Look at this xxxx</title>
+		<meta charset="utf-8">
+		<meta name = "description" content = "Example description">
+		<meta name = "author" content = "Matt">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1">
+
+		<link rel="stylesheet" type="text/css" href="#">
+		<link rel = "icon" href = "iconx.png">
+		<script></script>
+		
+		<style>
+			#videoEffect {
+				/*filter: url(#inverse);*/
+				margin-left: auto;
+			    margin-right: auto;
+			    display: block
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+
+	</head>
+
+
+	<body>
+		<h1> Look at this graph!</h1>
+		<video id = "videoEffect" controls poster="images/lookAtThisGraph.jpg">
+			<source src="video/lookAtThisGraph.mp4" type = "video/mp4">
+			<source src="video/lookAtThisGraph.webm"type = "video/webm">
+			<track src="video/gobEN.vtt" kind="captions" srclang="en" label="English" default>
+		</video>
+
+<!--
+		<?xml version = "1.0"?>
+		<svg xmlns = "http://www.w3.org/2000/svg">
+			<defs>
+				<filter id = "blurEffect">
+					<feGaussianBlur stdDeviation = "5"/>
+					
+				</filter>
+
+				<filter id = "displacement">
+						<feDisplacementMap scale = "100" in="SourceGraphic" xChannelSelector = "R" yChannelSelector = "G" />
+				</filter>
+
+				<filter id = "inverse">
+					<feComponentTransfer>
+						<feFuncR type = "table" tableValues = "1 0"/>
+						<feFuncG type = "table" tableValues = "1 0"/>
+						<feFuncB type = "table" tableValues = "1 0"/>
+					</feComponentTransfer>
+				</filter>
+				<filter id = "displacemenFilter">
+						<feTurbulence type = "turbulence" baseFrequency = "0.01" numOctaves = "3" results = "turbulence" />
+
+				</filter>
+
+			</defs>
+		</svg>
+	-->
+
+	</body>
+
+</html>
